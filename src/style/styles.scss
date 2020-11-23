@@ -1,0 +1,77 @@
+@import "./elements.scss";
+
+:root {
+}
+body {
+  margin: 0;
+  .topBar {
+    width: 100%;
+    background-color: $lightBlue;
+    height: 35px;
+
+    .title {
+      font-size: $fontSizeBig;
+      font-weight: bold;
+    }
+  }
+  .container {
+    display: inline-flex;
+    width: 100%;
+  }
+
+  button {
+    width: 60px;
+    height: 35px;
+    background-color: $lightGreen;
+    cursor: pointer;
+
+    &.delete {
+      background-color: $red;
+      width: 70px;
+      position: relative;
+      right: 0;
+      left: -2%;
+      top: 50%;
+    }
+    &.save {
+      position: relative;
+      top: 60%;
+      left: 90%;
+    }
+  }
+
+  .productSContainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    flex: 2;
+
+    .productContainer {
+      border: solid 1px $black;
+      height: 110px;
+      display: flex;
+      margin-bottom: 20px;
+      cursor: pointer;
+      &:last-child {
+        margin: 0;
+      }
+
+      &:hover {
+        background-color: $lightBlue;
+      }
+      .productDetails {
+        width: 100%;
+      }
+      .productImage {
+        height: 80px;
+        width: 80px;
+      }
+    }
+  }
+  .productView {
+    border: solid 1px $black;
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+  }
+}
